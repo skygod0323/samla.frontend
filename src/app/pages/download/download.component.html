@@ -1,0 +1,38 @@
+<div class="download-page">
+  <div class="container">
+    <div class="wrapper" *ngIf="download_code == 'error'">
+      <div class="image-wrapper">
+        <img src="../../../assets/image/animat-x.gif">
+      </div>
+      <div class="title">
+        <p>This link is old and therefore gone :(</p>
+      </div>
+      <div class="notice">
+        <p>Remember, To keep all links fresh they are only available for download two times and they are deleted after
+          one week.</p>
+      </div>
+
+      <div class="btn-wrapper">
+        <button class="" (click)="backToHome()">go back to homepage</button>
+      </div>
+    </div>
+    <div class="wrapper" *ngIf="download_code != 'error'">
+      <div class="image-wrapper">
+        <img src="../../../assets/image/animat-image.gif">
+      </div>
+      <div class="title">
+        <p>Your images are ready to be downloaded</p>
+      </div>
+      <div class="notice">
+        <p>Remember, To keep all links fresh they are only available for download two times and they are deleted after
+          one week.</p>
+      </div>
+
+      <div class="btn-wrapper">
+        <button class="" (click)="download()">Download images</button>
+      </div>
+    </div>
+  </div>
+
+  <a id="download" href="" target="" style="display: none"></a>
+</div>

@@ -1,0 +1,37 @@
+<mat-drawer-container class="example-container" hasBackdrop="true">
+
+  <mat-drawer-content>
+    <div class="header">
+      <div class="container">
+        <div class="clearfix">
+          <div class="logo float-left">
+            <a routerLink="/"><img src="../../assets/image/logo.png"></a>
+          </div>
+
+          <div class="sidenav-toggle float-right" (click)="drawer.toggle()">
+            <i class="material-icons">
+              menu
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </mat-drawer-content>
+
+  <mat-drawer #drawer mode="over" position="end" class="main-sidenav">
+    <h2>Menu</h2>
+
+    <div class="menus">
+      <div class="menu-item" (click)="drawer.toggle(); goto('/')">Home</div>
+      <div class="menu-item" (click)="drawer.toggle(); goto('/about')">About</div>
+      <div class="menu-item">contact</div>
+      <div class="menu-item">Terms & Conditions</div>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>

@@ -1,0 +1,42 @@
+.download-page {
+  .wrapper {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    text-transform: uppercase;
+
+    .image-wrapper {
+      margin-top: 130px;
+      margin-bottom: 20px;
+      img {
+        width: 200px;
+      }
+    }
+
+    .title {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .notice {
+      font-weight: bold;
+    }
+
+    .btn-wrapper {
+      margin-top: 50px;
+      button {
+        background-color: #25ae8a;
+        font-size: 20px;
+        padding: 10px 30px;
+        border-radius: 25px;
+        border: none;
+        color: white;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: #3ac28c;
+        }
+      }
+    }
+  }
+}

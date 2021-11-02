@@ -1,0 +1,58 @@
+.header {
+  padding: 20px 0px;
+  height: 90px;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  // -webkit-box-shadow: 0px 7px 11px 0px rgba(235,235,235,1);
+  // -moz-box-shadow: 0px 7px 11px 0px rgba(235,235,235,1);
+  // box-shadow: 0px 7px 11px 0px rgba(235,235,235,1);
+
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+  z-index: 100;
+
+  .logo {
+    img {
+      height: 50px;
+    }
+  }
+
+  .sidenav-toggle {
+    padding: 10px 0px 0px 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+    display: none;    //// for parklane
+
+    .material-icons {
+      font-size: 30px;
+    }
+  }
+}
+
+
+.mat-drawer-container {
+  background-color: white;
+}
+
+.main-sidenav {
+  width: 400px;
+  text-transform: uppercase;
+  padding: 30px 20px;
+
+  .menus {
+    .menu-item {
+      margin: 15px 0px;
+      cursor: pointer;
+    }
+  }
+}
+
+.main-content {
+  padding-top: 90px;
+  background-color: #f9f9f9;
+  overflow: auto;
+}
+  

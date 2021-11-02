@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/scss/bootstrap.scss";
+@import "app/shared/style/custom-style.scss";
+
+.table th {
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #eee;
+  text-align: left;
+  padding: 4px;
+}
+
+.table td {
+  font-size: 11px;
+  padding: 4px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.table.big {
+  th {
+    font-size: 16px;
+  }
+
+  td {
+    font-size: 14px;
+  }
+}

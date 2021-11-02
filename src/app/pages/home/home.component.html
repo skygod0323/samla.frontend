@@ -1,0 +1,155 @@
+<div class="homepage">
+  <mat-drawer-container class="" hasBackdrop="true">
+    <mat-drawer-content>
+      <div class="content">
+        <div class="categoryToggle d-inline-block" (click)="categoryDrawer.toggle()">
+          <img src="../../../assets/image/category-toggle.png">
+        </div>
+        <div class="content-inner">
+          <div class="container">
+            <div class="search-bar">
+              <div class="row">
+                <!-- <div class="col-md-2 mb-2" style="padding: 4px">
+                  <div class="categoryToggle" (click)="categoryDrawer.toggle()">
+                    <button class="mat-raised-button">
+                      <i class="material-icons">
+                        vertical_split
+                      </i>
+                      <span class="d-inline-block ml-2">Filter By Category</span>
+                    </button>
+                  </div>
+                </div> -->
+                <div class="col-md-12" style="padding: 10px">
+                  <div class="searchInputWrapper">
+                    <input class="d-block" placeholder="KEYWORD SEARCH..." [(ngModel)]="searchKey" (input)="filter()">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="images-wrapper">
+              <div class="row">
+                <div class="column">
+                  <div class="item" *ngFor="let item of column1" (click)="selectItem(item)"
+                    [ngClass]="{selected: item.selected}">
+                    <div class="item-inner">
+                      <img [src]="item.lowimageurl">
+                    </div>
+                    <div class="backdrop"></div>
+                    <div class="check">
+                      <!-- <span>
+                        <i class="fa fa-check"></i>
+                      </span> -->
+
+                      <img src="../../../assets/image/success_image-bank.svg">
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="item" *ngFor="let item of column2" (click)="selectItem(item)"
+                    [ngClass]="{selected: item.selected}">
+                    <div class="item-inner">
+                      <img [src]="item.lowimageurl">
+                    </div>
+
+                    <div class="backdrop"></div>
+                    <div class="check">
+                      <!-- <span>
+                        <i class="fa fa-check"></i>
+                      </span> -->
+
+                      <img src="../../../assets/image/success_image-bank.svg">
+
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="item" *ngFor="let item of column3" (click)="selectItem(item)"
+                    [ngClass]="{selected: item.selected}">
+                    <div class="item-inner">
+                      <img [src]="item.lowimageurl">
+                    </div>
+
+                    <div class="backdrop"></div>
+                    <div class="check">
+                      <!-- <span>
+                        <i class="fa fa-check"></i>
+                      </span> -->
+
+                      <img src="../../../assets/image/success_image-bank.svg">
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="item" *ngFor="let item of column4" (click)="selectItem(item)"
+                    [ngClass]="{selected: item.selected}">
+                    <div class="item-inner">
+                      <img [src]="item.lowimageurl">
+                    </div>
+
+                    <div class="backdrop"></div>
+                    <div class="check">
+                      <!-- <span>
+                        <i class="fa fa-check"></i>
+                      </span> -->
+
+                      <img src="../../../assets/image/success_image-bank.svg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div *ngIf="maxImageCount < filteredList.length" class="text-center loadMoreWrapper">
+                <button (click)="loadMore()">Load 20 more images</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="selectedItems" *ngIf="getSelectedCount() > 0">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="clearSelection d-inline-block" (click)="clearSelection()">
+                    <span class="icon d-inline-block mr-1">
+                      <img src="../../../assets/image/clear-selection.png">
+                    </span>
+                    <span class="text">Clear Selection</span>
+                  </div>
+                </div>
+                <div class="col-md-4 text-center">
+                  <div class="selectedCount">
+                    <span>{{getSelectedCount()}} IMAGES SELECTED</span>
+                  </div>
+                </div>
+                <div class="col-md-4 text-right">
+                  <button class="" (click)="continue()">Continue</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <a class="footer-inner" href="https://www.samla.app" target="_blank">
+            <img class="image" src="../../../assets/image/logo.png"><br>
+            <!-- <label class="footer-text">En bildbankslösning från</label><br>
+            <img class="samla-logo" src="../../../assets/image/Samla-logo-black-01.png"> -->
+          </a>
+        </div>
+      </div>
+    </mat-drawer-content>
+
+    <mat-drawer #categoryDrawer mode="over" class="category-sidenav" fixedInViewport="true">
+      <h2>Filter</h2>
+
+      <div class="categories">
+        <div class="category-item show-all" [ngClass]="{selected: isSelectedAllCategory()}"
+          (click)="selectAllCategory()">
+          Show All</div>
+        <div class="category-item" *ngFor="let item of categoryList" [ngClass]="{selected: item.selected}"
+          (click)="selectCategory(item)">{{item.name}}</div>
+      </div>
+    </mat-drawer>
+  </mat-drawer-container>
+
+</div>
